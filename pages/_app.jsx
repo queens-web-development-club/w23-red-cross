@@ -5,7 +5,7 @@ export default ({ Component, pageProps }) => {
 	return (
 		<>
 			<Header />
-			<div class='container mx-auto'>
+			<div className='container mx-auto'>
 				<Component {...pageProps} />
 			</div>
 		</>

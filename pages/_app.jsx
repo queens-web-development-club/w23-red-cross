@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Header from '../components/Header';
 
+//TODO: add footer
 export default ({ Component, pageProps }) => {
 	return (
 		<>

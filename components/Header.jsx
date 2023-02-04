@@ -10,8 +10,10 @@ const socials = [
 ];
 
 const links = [
+	{ name: 'About', href: '/about' },
+	{ name: 'Execs', href: '/execs' },
 	{ name: 'Events', href: '/events' },
-	{ name: 'About', href: '/about' }
+	{ name: 'Contact Us', href: '/contact' }
 ];
 
 export default () => {
@@ -21,14 +23,14 @@ export default () => {
 	return (
 		<nav className='px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 bg-white border-b border-gray-200'>
 			<div className='container flex flex-wrap justify-between items-center mx-auto'>
-				<Link root href='/' className='flex items-center'>
+				<Link href='/' className='flex items-center'>
 					<span className='self-center text-xl font-semibold whitespace-nowrap'>
 						QU Red Cross
 					</span>
 				</Link>
 				<div className='flex md:order-2'>
 					{socials.map(x => (
-						<Link href={x.href} className='inline-flex items-center px-2 text-gray-500 hover:opacity-80'>
+						<Link key={x.href} href={x.href} className='inline-flex items-center px-2 text-gray-500 hover:opacity-80'>
 							{x.element}
 						</Link>
 					))}
@@ -45,8 +47,8 @@ export default () => {
 							const active = `${common} text-white bg-blue-700 md:bg-transparent md:text-blue-700`;
 							const inActive = `${common} text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700`;
 							return (
-								<li>
-									<Link root href={x.href} className={router.pathname.endsWith(x.href) ? active : inActive}>
+								<li key={x.href}>
+									<Link href={x.href} className={router.pathname.endsWith(x.href) ? active : inActive}>
 										{x.name}
 									</Link>
 								</li>

@@ -5,5 +5,5 @@ export default () => {
 				About page text here
 			</h1>
 		</div>
-	)
+	);
 };

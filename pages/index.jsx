@@ -5,5 +5,5 @@ export default () => {
 				Landing page text here
 			</h1>
 		</div>
-	)
+	);
 };

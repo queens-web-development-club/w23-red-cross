@@ -8,5 +8,5 @@ export default () => {
 				Events text/calendar here
 			</h1>
 		</div>
-	)
+	);
 };

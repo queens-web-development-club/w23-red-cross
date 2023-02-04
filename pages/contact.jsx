@@ -5,5 +5,5 @@ export default () => {
 				Contact page text here
 			</h1>
 		</div>
-	)
+	);
 };

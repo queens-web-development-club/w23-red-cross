@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-//TODO: add footer
 export default ({ Component, pageProps }) => {
 	return (
 		<>
@@ -9,6 +9,7 @@ export default ({ Component, pageProps }) => {
 			<div className='container mx-auto'>
 				<Component {...pageProps} />
 			</div>
+			<Footer />
 		</>
 	);
 };

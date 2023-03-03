@@ -21,7 +21,7 @@ export default () => {
 		<nav className='px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 bg-white'>
 			<div className='container flex flex-wrap justify-between items-center mx-auto'>
 				<Link href='/'>
-					<HeaderLogo className='h-20' />
+					<HeaderLogo className='h-20 text-[#333333]' />
 				</Link>
 				<div className='flex md:hidden'>
 					<button onClick={() => setShowMobile(x => !x)} className='inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'>

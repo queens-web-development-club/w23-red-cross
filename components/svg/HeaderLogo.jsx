@@ -4,7 +4,7 @@ export default props => {
 			<defs>
 				<style>{`
 					.cls-1 {
-						fill: #333333;
+						fill: currentcolor;
 					}
 
 					.cls-2 {

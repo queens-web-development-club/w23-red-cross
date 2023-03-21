@@ -34,7 +34,7 @@ export default () => {
 							const common = 'font-bold block py-2 pr-4 pl-3 rounded md:p-0';
 							const active = `${common} bg-[#CC3333] md:bg-transparent text-white md:text-inherit md:rounded-none md:border-b-2 md:border-[#333333]`;
 							const inActive = `${common} hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-75`;
-							const contactActive = `${common} bg-[#CC3333] text-white md:text-white md:py-3 md:px-4 md:-mt-3 md:rounded-2xl md:bg-[#CC3333] md:hover:opacity-75`;
+							const contactActive = `${common} bg-[#CC3333] text-white md:text-white md:py-3 md:px-4 md:-mt-3 md:rounded-2xl md:bg-[#CC3333]`;
 							const contactInActive = `${common} hover:bg-gray-100 md:hover:bg-[#CC3333] md:text-white md:py-3 md:px-4 md:-mt-3 md:rounded-2xl md:bg-[#CC3333] md:hover:opacity-75`;
 							return x.name !== 'CONTACT' ? (
 								<li key={x.href}>

@@ -29,7 +29,7 @@ export default () => {
 				</div>
 			</div>
 
-			<div className='mt-12 grid grid-cols-[1fr_4fr_1fr] md:grid-cols-[1fr_2fr_2fr_1fr] gap-6'>
+			<div className='mt-12 grid grid-cols-[1fr_4fr_1fr] md:grid-cols-[1fr_2fr_2fr_1fr] gap-5'>
 				<GreyBox extendLeft />
 				<div className='mt-6'>
 					<Image className={styles.image} src={lauren} />
@@ -52,7 +52,7 @@ export default () => {
 				<GreyBox extendRight />
 			</div>
 
-			<div className='mt-12 grid grid-cols-[1fr_4fr_1fr] md:grid-cols-[1fr_2fr_2fr_2fr_1fr] gap-6'>
+			<div className='mt-12 grid grid-cols-[1fr_4fr_1fr] md:grid-cols-[1fr_2fr_2fr_2fr_1fr] gap-5'>
 				<GreyBox extendLeft />
 				<div className='mt-6'>
 					<Image className={styles.image} src={spencer} />

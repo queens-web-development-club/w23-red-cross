@@ -1,10 +1,11 @@
-    
 
 
 .wrapper{
     margin: 0 auto;
     position: relative;
     width:fit-content;
+    overflow: visible ;
+    
 }
 
 .ourteam{
@@ -25,7 +26,7 @@
 
 .ourTeamWrapper{
     width: 100%;
-    align-self: center;
+    position:center;
     background-color: rgb(39, 36, 36);
     height: 100px;
 }

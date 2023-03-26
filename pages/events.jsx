@@ -21,16 +21,19 @@ export default () => {
 	
 	return (
 		<>
-			<div className='relative before:absolute before:h-full before:bg-[#333333] before:w-[200vw] before:left-[-100vw] before:-z-10'>
+			<div className='w-screen h-full bg-[#333333]'>
 				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
 					Upcoming Events
 				</div>
 			</div>
-			<div className='max-w-3xl my-2 px-3 mx-auto'>
+			<div className='container my-2 px-3 mx-auto'>
 				{Object.keys(days).map(day => (
 					<div key={day} className='my-1 border-b border-[#333333] flex flex-row'>
 						<div className='mr-4 font-bold text-2xl text-right'>
-							{day.split(' ')[0]}<br />{day.split(' ')[1]}
+							{day.split(' ')[0] === 'TBD' ?
+								'TBD' :
+								<>{day.split(' ')[0]}<br />{day.split(' ')[1]}</>
+							}
 						</div>
 						<div className='flex-1'>
 							{days[day].map((event, idx) => (

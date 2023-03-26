@@ -22,8 +22,8 @@ const GreyBox = props => {
 
 export default () => {
 	return (
-		<div>
-			<div className='relative before:absolute before:h-full before:bg-[#333333] before:w-[200vw] before:left-[-100vw] before:-z-10'>
+		<>
+			<div className='w-screen h-full bg-[#333333]'>
 				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
 					Our Team
 				</div>
@@ -119,6 +119,6 @@ export default () => {
 				</div>
 				<GreyBox extendRight/>
 			</div>
-		</div>
+		</>
 	)
 };

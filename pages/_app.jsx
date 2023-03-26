@@ -6,7 +6,7 @@ export default ({ Component, pageProps }) => {
 	return (
 		<>
 			<Header />
-			<div className='container mx-auto flex-1'>
+			<div className='flex-1'>
 				<Component {...pageProps} />
 			</div>
 			<Footer />

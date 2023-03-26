@@ -16,7 +16,7 @@ const GreyBox = props => {
 	if (props.extendRight)
 		styles += 'before:left-0';
 	return (
-		<div className={`${props.clasName || ''} ${styles} relative before:absolute before:h-full before:w-screen before:bg-[#D3D3D3] mt-12 bg-[#D3D3D3] h-[55%]`} />
+		<div className={`${props.clasName || ''} ${styles} relative before:absolute before:h-full before:w-screen before:bg-[#D3D3D3] mt-[100px] bg-[#D3D3D3] h-[394px]`} />
 	);
 };
 

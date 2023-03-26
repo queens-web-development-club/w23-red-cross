@@ -1,7 +1,7 @@
 export default () => {
 	return (
 		<div>
-			<h1 className='text-4xl text-bold text-red-500'>
+			<h1 className='container mx-auto text-4xl text-red-500'>
 				Showcase here
 			</h1>
 		</div>

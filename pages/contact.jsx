@@ -1,24 +1,25 @@
 import { useState } from 'react';
 
-//TODO: add email address
+const EMAIL = 'qusupportredcross@clubs.queensu.ca';
+
 export default () => {
 	const [subject, setSubject] = useState('');
 	const [body, setBody] = useState('');
-	const [href, setHref] = useState('mailto:quredcross@queensu.ca');
+	const [href, setHref] = useState(`mailto:${EMAIL}`);
 
 	const handleSubject = e => {
 		setSubject(e.target.value);
-		setHref(`mailto:quredcross@queensu.ca?subject=${encodeURIComponent(e.target.value)}&body=${encodeURIComponent(body)}`);
+		setHref(`mailto:${EMAIL}?subject=${encodeURIComponent(e.target.value)}&body=${encodeURIComponent(body)}`);
 	};
 
 	const handleBody = e => {
 		setBody(e.target.value);
-		setHref(`mailto:quredcross@queensu.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(e.target.value)}`);
+		setHref(`mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(e.target.value)}`);
 	};
 
 	return (
 		<>
-			<div className='bg-[#333333] w-full relative before:absolute before:h-full before:bg-[#333333] before:w-[200vw] before:left-[-100vw] before:-z-10'>
+			<div className='relative before:absolute before:h-full before:bg-[#333333] before:w-[200vw] before:left-[-100vw] before:-z-10'>
 				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
 					Contact Us
 				</div>

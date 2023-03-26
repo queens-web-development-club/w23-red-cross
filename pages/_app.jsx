@@ -14,6 +14,7 @@ export default ({ Component, pageProps }) => {
 				{`
 					/* for footer to be at bottom */
 					#__next {
+						overflow-x: hidden;
 						min-height: 100vh;
 						display: flex;
 						flex-direction: column;

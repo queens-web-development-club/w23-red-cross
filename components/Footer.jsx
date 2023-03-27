@@ -9,7 +9,7 @@ const INSTAGRAM_LINK = 'https://www.instagram.com/redcrossqueensu';
 export default () => {
 	const common = 'w-6 h-6 hover:opacity-75';
 	return (
-		<div className='px-2 sm:px-8 py-4 sticky w-full bg-[#333333] text-white flex flex-row items-center justify-between'>
+		<div className='px-2 sm:px-8 py-4 sticky w-full bg-[#3A3A3C] text-white flex flex-row items-center justify-between'>
 			<div className='flex flex-row gap-4'>
 				<Link href={FACEBOOK_LINK}>
 					<Facebook className={common} />

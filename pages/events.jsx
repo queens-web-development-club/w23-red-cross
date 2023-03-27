@@ -1,55 +1,63 @@
 import { useState, useEffect } from 'react'
 
 export default () => {
-	const [days, setDays] = useState(null);
+	const [events, setEvents] = useState(null);
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
 		fetch('https://raw.githubusercontent.com/beans42/qurc-events/master/events.json', { cache: 'no-store' })
 			.then(res => res.json())
 			.then(data => {
-				setDays(data);
+				setEvents(data);
 				setLoading(false);
 			});
 	}, []);
 
-	if (isLoading)
-		return <p className='font-bold text-2xl'>Loading...</p>;
-
-	if (Object.keys(days).length === 0)
-		return <p className='font-bold text-2xl'>No events planned.</p>;
-	
 	return (
 		<>
-			<div className='w-screen h-full bg-[#333333]'>
-				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
-					Upcoming Events
+			<div className='relative'>
+				<div className='w-screen bg-center bg-cover bg-[linear-gradient(transparent,#3A3A3C),url("/landing.jpg")] h-[65vh]' />
+				<div className='absolute w-full bottom-[5vw]'>
+					<div className='text-white mb-8 font-bold text-6xl text-center'>
+						Upcoming Events
+					</div>
+					<div className='text-white mb-8 text-2xl text-center'>
+						Learn how you can contribute to<br/>
+						Red Cross at Queen's
+					</div>
 				</div>
 			</div>
-			<div className='container my-2 px-3 mx-auto'>
-				{Object.keys(days).map(day => (
-					<div key={day} className='my-1 border-b border-[#333333] flex flex-row'>
-						<div className='mr-4 font-bold text-2xl text-right'>
-							{day.split(' ')[0] === 'TBD' ?
-								'TBD' :
-								<>{day.split(' ')[0]}<br />{day.split(' ')[1]}</>
-							}
-						</div>
-						<div className='flex-1'>
-							{days[day].map((event, idx) => (
-								<div key={idx} className={`pb-3 ${idx === days[day].length - 1 ? '' : 'border-b border-[#333333]'}`}>
-									<span className='font-bold text-xl'>{event.name}</span>
-									<img className='object-contain w-full' src={event.image} />
-									<span className='font-bold'>Time:</span> {event.time}<br />
-									<span className='font-bold'>Location:</span> {event.location}
-									<p className=''>
+			<div className='h-full px-4 py-14 bg-[#3A3A3C]'>
+				{
+					isLoading ? <div className='text-white font-bold text-3xl text-center'>Loading...</div> :
+						events.length === 0 ? <div className='text-white font-bold text-3xl text-center'>No events planned.</div> : (
+						events.map((event, idx) => (
+							<div key={idx} className='mx-auto mb-12 rounded-3xl p-10 max-w-3xl bg-[#FBFBFB]'>
+								<div className='relative min-h-[120px] mb-6 before:content-none before:table after:content-none after:table after:clear-both'>
+									<div className='float-right w-fit font-bold text-2xl text-white'>
+										<div className='rounded-xl p-3 bg-[#BF1E2E]'>{event.date}</div>
+										{event.dateEnd &&
+											<div className='rounded-xl mt-2 p-3 bg-[#BF1E2E]'>{event.date}</div>
+										}
+									</div>
+									<div className='pt-[76px] text-[#3A3A3C] font-bold text-5xl'>{event.name}</div>
+								</div>
+								<div className='grid h-fit grid-cols-1 md:grid-cols-2 gap-4 font-bold text-[#BF1E2E] text-2xl'>
+									<div className='rounded-lg align-middle text-center p-5 border-4 border-[#BF1E2E]'>
+										{event.time}
+									</div>
+									<div className='rounded-lg align-middle text-center p-5 border-4 border-[#BF1E2E]'>
+										{event.location}
+									</div>
+								</div>
+								{event.description &&
+									<p className='mt-6 text-[#3A3A3C] text-xl'>
 										{event.description}
 									</p>
-								</div>
-							))}
-						</div>
-					</div>
-				))}
+								}
+							</div>
+						))
+				)}
 			</div>
 		</>
 	);

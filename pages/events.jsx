@@ -37,7 +37,7 @@ export default () => {
 									<div className='float-right w-fit font-bold text-2xl text-white'>
 										<div className='rounded-xl p-3 bg-[#BF1E2E]'>{event.date}</div>
 										{event.dateEnd &&
-											<div className='rounded-xl mt-2 p-3 bg-[#BF1E2E]'>{event.date}</div>
+											<div className='rounded-xl mt-2 p-3 bg-[#BF1E2E]'>{event.dateEnd}</div>
 										}
 									</div>
 									<div className='pt-[76px] text-[#3A3A3C] font-bold text-5xl'>{event.name}</div>

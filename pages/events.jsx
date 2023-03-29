@@ -1,3 +1,4 @@
+import landing from '../public/landing.jpg'
 import { useState, useEffect } from 'react'
 
 export default () => {
@@ -16,7 +17,12 @@ export default () => {
 	return (
 		<>
 			<div className='relative'>
-				<div className='w-screen bg-center bg-cover bg-[linear-gradient(transparent,#3A3A3C),url("/landing.jpg")] h-[65vh]' />
+				<div className='w-screen bg-center bg-cover h-[65vh]' id='splash' />
+				<style jsx>{`
+					#splash {
+						background-image: linear-gradient(transparent,#3A3A3C),url("${landing.src}");
+					}
+				`}</style>
 				<div className='absolute w-full bottom-[5vw]'>
 					<div className='text-white mb-8 font-bold text-6xl text-center'>
 						Upcoming Events

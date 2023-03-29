@@ -5,7 +5,7 @@ export default () => {
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
-		fetch('https://raw.githubusercontent.com/beans42/qurc-events/master/events.json', { cache: 'no-store' })
+		fetch('https://raw.githubusercontent.com/queens-web-development-club/w23-red-cross/main/events.json', { cache: 'no-store' })
 			.then(res => res.json())
 			.then(data => {
 				setEvents(data);

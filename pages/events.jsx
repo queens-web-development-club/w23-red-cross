@@ -1,5 +1,6 @@
 import landing from '../public/landing.jpg'
 import { useState, useEffect } from 'react'
+import Head from 'next/head';
 
 export default () => {
 	const [events, setEvents] = useState(null);
@@ -16,6 +17,9 @@ export default () => {
 
 	return (
 		<>
+			<Head>
+				<title>Upcoming Events</title>
+			</Head>
 			<div className='relative'>
 				<div className='w-screen bg-center bg-cover h-[65vh]' id='splash' />
 				<style jsx>{`

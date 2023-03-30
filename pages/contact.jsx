@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 
 const EMAIL = 'qusupportredcross@clubs.queensu.ca';
@@ -19,6 +20,9 @@ export default () => {
 
 	return (
 		<>
+			<Head>
+				<title>Contact Us</title>
+			</Head>
 			<div className='w-screen h-full bg-[#333333]'>
 				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
 					Contact Us

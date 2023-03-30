@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import lauren from '../public/lauren.jpg';
 import julianne from '../public/julianne.jpg';
@@ -22,6 +23,9 @@ export default () => {
 
 	return (
 		<>
+			<Head>
+				<title>Our Team</title>
+			</Head>
 			<div className='w-screen h-full bg-[#333333]'>
 				<div className='h-full w-fit py-3 px-9 mx-auto font-bold text-3xl bg-[#CC3333] text-[#FBFBFB]'>
 					Our Team

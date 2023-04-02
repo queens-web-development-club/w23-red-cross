@@ -1,8 +1,15 @@
+import landing from '../public/landing.jpg';
+
 export default () => {
 	return (
 		<>
 			<div className='relative'>
-				<div className='w-screen bg-center bg-cover bg-[radial-gradient(transparent,black),url("/landing.jpg")] h-[65vh]' />
+			<div className='w-screen bg-center bg-cover h-[65vh]' id='splash' />
+				<style jsx>{`
+					#splash {
+						background-image: linear-gradient(transparent,black),url("${landing.src}");
+					}
+				`}</style>
 				<div className='absolute left-[5vw] bottom-[5vw]'>
 					<div className='text-white w-fit text-2xl bg-[#BF1E2E] py-3 px-5 rounded-[22px]'>
 						Queen's University

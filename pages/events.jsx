@@ -1,11 +1,13 @@
+import landing from '../public/landing.jpg'
 import { useState, useEffect } from 'react'
+import Head from 'next/head';
 
 export default () => {
 	const [events, setEvents] = useState(null);
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
-		fetch('https://raw.githubusercontent.com/beans42/qurc-events/master/events.json', { cache: 'no-store' })
+		fetch('https://raw.githubusercontent.com/queens-web-development-club/w23-red-cross/main/events.json', { cache: 'no-store' })
 			.then(res => res.json())
 			.then(data => {
 				setEvents(data);
@@ -15,8 +17,16 @@ export default () => {
 
 	return (
 		<>
+			<Head>
+				<title>Upcoming Events</title>
+			</Head>
 			<div className='relative'>
-				<div className='w-screen bg-center bg-cover bg-[linear-gradient(transparent,#3A3A3C),url("/landing.jpg")] h-[65vh]' />
+				<div className='w-screen bg-center bg-cover h-[65vh]' id='splash' />
+				<style jsx>{`
+					#splash {
+						background-image: linear-gradient(transparent,#3A3A3C),url("${landing.src}");
+					}
+				`}</style>
 				<div className='absolute w-full bottom-[5vw]'>
 					<div className='text-white mb-8 font-bold text-6xl text-center'>
 						Upcoming Events

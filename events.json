@@ -1,0 +1,25 @@
+[
+	{
+		"name": "Speaker from the Canadian Red Cross Event",
+		"date": "03/01/2023",
+		"dateEnd": "",
+		"time": "TBD",
+		"location": "Zoom",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium accumsan massa, ac euismod lorem gravida nec. Phasellus nulla orci, iaculis sit amet interdum sit amet, posuere a neque. Nam non lobortis turpis. Nulla facilisi. Aliquam arcu enim, finibus ut fermentum eget, volutpat nec arcu. Donec vestibulum justo at ante rhoncus lacinia. Donec vel aliquam massa, et imperdiet odio. Mauris rutrum malesuada mi. Morbi nibh dui, facilisis ac rhoncus id, egestas non arcu."
+	},
+	{
+		"name": "Winter 2023 Sports Fundraiser",
+		"date": "TBD",
+		"dateEnd": "",
+		"time": "TBD",
+		"location": "TBD",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium accumsan massa, ac euismod lorem gravida nec. Phasellus nulla orci, iaculis sit amet interdum sit amet, posuere a neque. Nam non lobortis turpis. Nulla facilisi. Aliquam arcu enim, finibus ut fermentum eget, volutpat nec arcu. Donec vestibulum justo at ante rhoncus lacinia. Donec vel aliquam massa, et imperdiet odio. Mauris rutrum malesuada mi. Morbi nibh dui, facilisis ac rhoncus id, egestas non arcu."
+	},	{
+		"name": "Bottle Drive 2023",
+		"date": "03/17/2023",
+		"dateEnd": "03/18/2023",
+		"time": "All day",
+		"location": "Queen's University",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium accumsan massa, ac euismod lorem gravida nec. Phasellus nulla orci, iaculis sit amet interdum sit amet, posuere a neque. Nam non lobortis turpis. Nulla facilisi. Aliquam arcu enim, finibus ut fermentum eget, volutpat nec arcu. Donec vestibulum justo at ante rhoncus lacinia. Donec vel aliquam massa, et imperdiet odio. Mauris rutrum malesuada mi. Morbi nibh dui, facilisis ac rhoncus id, egestas non arcu."
+	}
+]

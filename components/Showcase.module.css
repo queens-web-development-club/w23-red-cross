@@ -22,8 +22,9 @@
 .image{
     width:auto;
     height: 100%;
-    border-top-left-radius: 95px;
-    border-bottom-left-radius: 95px;
+    border-radius: 95px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

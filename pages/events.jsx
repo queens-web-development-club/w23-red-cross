@@ -60,11 +60,6 @@ export default () => {
 										{event.location}
 									</div>
 								</div>
-								{event.description &&
-									<p className='mt-6 text-[#3A3A3C] text-xl'>
-										{event.description}
-									</p>
-								}
 							</div>
 						))
 				)}
